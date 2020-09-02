@@ -1,0 +1,93 @@
+.hero-slider {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  &-cell {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &-title {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+
+      h1 {
+        position: relative;
+        font-size: 4.2rem;
+        color: #ffffff;
+        margin: auto;
+      }
+
+      button {
+        width: 140px;
+        height: 50px;
+        font-size: 1.8rem;
+        font-weight: 500;
+        background-color: #fff;
+        margin-top: 2rem;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #a1baf4;
+          border: none;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .flickity-page-dots {
+    bottom: 30px;
+
+    .dot {
+      opacity: 1;
+      background: transparent;
+      border: 1px solid white;
+
+      &.is-selected {
+        background: #fff;
+      }
+    }
+  }
+
+  .flickity-prev-next-button {
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    color: #fff;
+
+    &:hover {
+      background: transparent;
+    }
+
+    .arrow {
+      display: none;
+    }
+  }
+
+  .flickity-button-icon:hover {
+    transform: scale(1.1);
+  }
+
+  @include respond(above-tab-port) {
+    &-cell {
+      &-title {
+        h1 {
+          font-size: 7.2rem;
+        }
+      }
+    }
+
+    .flickity-prev-next-button {
+      .arrow {
+        display: initial;
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+.contact {
+  margin: 6rem 2rem;
+
+  &-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+
+    h2 {
+      font-size: 4.8rem;
+      padding-bottom: 4rem;
+      color: #464646;
+    }
+
+    p {
+      font-size: 1.8rem;
+      color: #414141;
+      padding-bottom: 4rem;
+    }
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-info {
+      color: #999999;
+      font-size: 1.7rem;
+
+      a {
+        color: #000;
+      }
+
+      &-bottom {
+        display: flex;
+        flex-direction: row;
+        width: 23rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        font-size: 1.2rem;
+
+        &-info {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+        }
+
+        &-links {
+          display: flex;
+          flex-direction: column;
+          margin: auto;
+
+          a {
+            text-decoration: none;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    &-inputs {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+
+      input {
+        font-size: 1.8rem;
+
+        &:first-child {
+          margin-bottom: 1rem;
+        }
+      }
+
+      &-validation {
+        margin-top: 1rem;
+        text-align: right;
+      }
+
+      a {
+        font-size: 1.5rem;
+      }
+
+      .send-button {
+        width: 140px;
+        height: 50px;
+        color: #fff;
+        font-size: 1.8rem;
+        background-color: #000000;
+        margin-top: 1rem;
+        align-self: flex-end;
+        cursor: pointer;
+        border: none;
+
+        &:hover {
+          background-color: #a1baf4;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  textarea {
+    font-family: Raleway;
+    resize: none;
+    font-size: 1.8rem;
+  }
+
+  @include respond(above-tab-port) {
+    margin: 15rem;
+
+    &-title {
+      align-items: center;
+      margin: auto;
+      text-align: center;
+      width: 37vw;
+    }
+
+    &-form {
+      flex-direction: row;
+
+      &-inputs {
+        padding-left: 12rem;
+        width: 38rem;
+      }
+    }
+  }
+}

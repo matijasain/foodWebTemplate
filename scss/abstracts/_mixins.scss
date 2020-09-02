@@ -1,0 +1,37 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == above-phone {
+    //600px
+    @media only screen and (min-width: 576px) {
+      @content;
+    }
+  }
+  @if $breakpoint == above-tab-port {
+    //900px
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == above-tab-land {
+    //1200px
+    @media only screen and (min-width: 992px) {
+      @content;
+    }
+  }
+  @if $breakpoint == above-big-desktop {
+    //1800px
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}

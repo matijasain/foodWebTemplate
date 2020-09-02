@@ -1,0 +1,79 @@
+.logo-slider {
+  background-color: #f8f8f8;
+
+  &-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.3rem;
+    width: 28%;
+    height: 200px;
+    margin-right: 10px;
+    color: #bbbbbb;
+    flex-basis: 25%;
+    cursor: pointer;
+
+    :hover {
+      color: red;
+    }
+  }
+
+  &-cell:before {
+    display: block;
+    text-align: center;
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+
+  &-cell.is-selected {
+    color: #4c4c4c;
+
+    &:hover {
+      color: #000;
+      font-weight: 500;
+    }
+  }
+
+  .flickity-prev-next-button {
+    display: none;
+    .arrow {
+      display: none;
+    }
+  }
+
+  .flickity-page-dots {
+    display: initial;
+    bottom: 30px;
+
+    .dot {
+      opacity: 1;
+      background: transparent;
+      border: 1px solid black;
+
+      &.is-selected {
+        background: #000;
+      }
+    }
+  }
+
+  .flickity-button-icon:hover {
+    transform: scale(1.1);
+  }
+
+  @include respond(above-tab-port) {
+    .flickity-prev-next-button {
+      display: initial;
+      background: transparent;
+
+      .arrow {
+        fill: black;
+        display: initial;
+      }
+    }
+
+    .flickity-page-dots {
+      display: none;
+    }
+  }
+}

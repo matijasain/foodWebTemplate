@@ -1,0 +1,39 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 4rem;
+  padding: 3rem;
+
+  background-color: #000;
+  color: #fff;
+
+  h2 {
+    font-size: 4.2rem;
+  }
+
+  li {
+    font-size: 1.6rem;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    ul {
+      margin: 3rem;
+    }
+  }
+
+  @include respond(above-tab-land) {
+    height: 55rem;
+    align-items: center;
+
+    &-list {
+      flex-direction: row;
+      width: 60vw;
+    }
+  }
+}

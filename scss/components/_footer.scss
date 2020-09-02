@@ -1,0 +1,114 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 517px;
+  background-color: #000;
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #7a7a7a;
+    padding-bottom: 2rem;
+  }
+
+  &-icons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 30rem;
+
+    img {
+      height: 24px;
+      width: 24px;
+      padding: 2rem 3rem;
+      cursor: pointer;
+    }
+  }
+
+  &-newsletter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+
+    &-form {
+      display: flex;
+      align-items: center;
+
+      input {
+        background-color: #000;
+        color: #737373;
+        padding-left: 2rem;
+        width: 170px;
+        height: 46px;
+        font-family: Raleway;
+        font-size: 1.8rem;
+
+        &:focus {
+          color: #fff;
+          font-weight: 700;
+          outline: none;
+          border: solid 1px #a1baf4;
+        }
+      }
+
+      button {
+        width: 85px;
+        height: 40px;
+        font-family: Raleway;
+        font-weight: 500;
+        font-size: 1.8rem;
+        margin-left: 1rem;
+        background-color: #fff;
+        cursor: pointer;
+        border: none;
+        outline: none;
+
+        &:hover {
+          background-color: #a1baf4;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
+  @include respond(above-tab-port) {
+    &-icons {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      width: 500px;
+
+      img {
+        height: 24px;
+        width: 24px;
+      }
+    }
+
+    &-newsletter {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5rem;
+
+      &-form {
+        display: flex;
+        align-items: center;
+
+        input {
+          width: 299px;
+        }
+
+        button {
+          width: 140px;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
